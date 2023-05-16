@@ -1,5 +1,6 @@
 %% Generate Matlab and Simulink Code for RobotX
 %  Create Simulink Library file RobotX_Lib.mdl
+%
 new_system('RobotX_Lib','Library');
 open_system('RobotX_Lib');
 
