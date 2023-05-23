@@ -1,4 +1,4 @@
-function [T] = DKin( Robot )
+function [T] = DKin_J( Robot )
 %DKin Homogeneous Transformation Matrix for Robot Direct Kinematics and
 %   T=[R p; 0 1]
 
