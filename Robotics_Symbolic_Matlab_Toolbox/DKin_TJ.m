@@ -1,4 +1,4 @@
-function [T,J] = DKin_TJ(Robot)
+function [T,J, J_rank] = DKin_TJ(Robot)
 % DKin Homogeneous Transformation Matrix for Robot Direct Kinematics and
 % T=[R p; 0 1]
 
@@ -17,9 +17,9 @@ Pe = [pex pey pez]';
 T = DHTransf(Robot(1,:));
 
 if Robot(1,1) == 0 % For a Revolut Joint
-    J(:,1) = [cross(T(1:3,3),Pe-T(1:3,4));T(1:3,3)];
+    J(:,1) = [cross([0 0 1].', Pe - [0 0 0].'); [0 0 1].'];
 else % For a Prismatic Joint
-    J(1:3,1) = [T(1:3,3);];
+    J(:,1) = [[0 0 1].'; [0 0 0].'];
 end
 
 % For the other Joints
@@ -27,7 +27,7 @@ for i=2:n
     % % Direct kinematics for remaining links
     % T = T * DHTransf(Robot(i,:));
     if isequal(Robot(i),q(i))
-        J(:,i) = [T(1:3,3);[0 0 0]'];
+        J(:,i) = [T(1:3,3);[0 0 0].'];
         % Direct kinematics for first link
         T = T*DHTransf(Robot(i,:));
     else
@@ -43,5 +43,9 @@ J = subs(J,Pe,T(1:3,4));
 % Simplify
 T = simplify(T);
 J = simplify(J);
+
+J = subs(J, q(3), 0);
+J_rank = rank(J);
+
 
 end
