@@ -1,0 +1,4 @@
+Funções de s(t) e s_dot são iguais?
+O CLIK é o mesmo do LAB1?
+INERTIA TENSOR FOR LINK#2?
+Correlation between image of DaVinci and L9.pdf?
