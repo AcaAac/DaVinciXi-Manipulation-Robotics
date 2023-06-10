@@ -1,6 +1,5 @@
 function tau = tau_NewtonEuler(DH, M, dq, ddq, w0, dw0, ddp0)
 
-
 % Joint 1 - Revolute
 A01 = DHTransf(DH(1,:));
 R01 = A01(1:3,1:3);
@@ -27,26 +26,26 @@ kk = [0 ; 0 ; 1];
 % Forward Recursion for Joint 1
 w1 = R01.'*(w0 + dq(1) * kk);
 dw1 = R01.' * (dw0 + ddq(1) * kk + dq(1) * cross(w0, kk));
-ddp1 = R01.' * ddp0 + cross(dw1, R01.' * r0_01) + cross(w1, cross(dw1, R01.' * r0_01));
+ddp1 = R01.' * ddp0 + cross(dw1, R01.' * r0_01) + cross(w1, cross(w1, R01.' * r0_01));
 ddpc1 = ddp1 + cross(dw1, M.rc{1}) + cross(w1, cross(w1, M.rc{1}));
 
 % Forward Recursion for Joint 2
 w2 = R12.'*(w1 + dq(2) * kk);
 dw2 = R12.' * (dw1 + ddq(2) * kk + dq(2) * cross(w1, kk));
-ddp2 = R12.' * ddp1 + cross(dw2, R12.' * r1_12) + cross(w2, cross(dw2, R12.' * r1_12));
+ddp2 = R12.' * ddp1 + cross(dw2, R12.' * r1_12) + cross(w2, cross(w2, R12.' * r1_12));
 ddpc2 = ddp2 + cross(dw2, M.rc{2}) + cross(w2, cross(w2, M.rc{2}));
 
 
 % Forward Recursion for Joint 3
 w3 = R23.' * (w2 + dq(3) * kk);
 dw3 = R23.' * (dw2 + ddq(3) * kk + dq(3) * cross(w2, kk));
-ddp3 = R23.' * ddp2 + cross(dw3, R23.' * r2_23) + cross(w3, cross(dw3, R23.' * r2_23));
+ddp3 = R23.' * ddp2 + cross(dw3, R23.' * r2_23) + cross(w3, cross(w3, R23.' * r2_23));
 ddpc3 = ddp3 + cross(dw3, M.rc{3}) + cross(w3, cross(w3, M.rc{3}));
 
 % Forward Recursion for Joint 4
 w4 = R34.' * (w3 + dq(4) * kk);
 dw4 = R34.' * (dw3 + ddq(4) * kk + dq(4) * cross(w3, kk));
-ddp4 = R34.' * ddp3 + cross(dw4, R34.' * r3_34) + cross(w4, cross(dw4, R34.' * r3_34));
+ddp4 = R34.' * ddp3 + cross(dw4, R34.' * r3_34) + cross(w4, cross(w4, R34.' * r3_34));
 ddpc4 = ddp4 + cross(dw4, M.rc{4}) + cross(w4, cross(w4, M.rc{4}));
 
 % Forward Recursion for Joint 5
@@ -91,23 +90,6 @@ tau(3) = kk.' * R23 * mu3;
 tau(4) = kk.' * R34 * mu4;
 % Joint 5 Prismatic
 tau(5) = kk.' * R45 * f5;
-
-% % Substitution for Inertia Tensors as Defined A Priori
-% r = 0.1;
-% h = 0.1;
-% M.m{1} = 3;
-% M.m{2} = 4;
-% Inertia_1 = [-1/12 * M.m{1} * (3 * r^2 + h^2) , 0 , 0;
-%              0 , 1/2 * M.m{1} * r^2 , 0 ;
-%              0 , 0 , 1/12 * M.m{1} * (3 * r^2 + h^2)];
-% subs(M.I{1}, Inertia_1);
-% 
-% Inertia_2 = [1/2 * M.m{2} * r^2 , 0 , 0;
-%              0 , 1/12 * M.m{2} * (3 * r^2 + h^2) , 0 ;
-%              0 , 0 , 1/12 * M.m{2} * (3 * r^2 + h^2)];
-% subs(M.I{2}, Inertia_2);
-
-
 
 end
 

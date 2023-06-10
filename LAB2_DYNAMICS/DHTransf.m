@@ -6,9 +6,9 @@ function A = DHTransf( p )
 % symbolically.
 q=symvar(p);        %get symbolic variable from p
 if isequal(p(2),q)  %if it is a rotational joint
-    p(2)=p(2);  %add offset to v
+    p(2)=p(2)+p(5);  %add offset to v
 else
-    p(1)=p(1);  %add offset to d
+    p(1)=p(1)+p(5);  %add offset to d
 end
 
 % Build D-H matrix
