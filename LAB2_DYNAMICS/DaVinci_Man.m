@@ -4,7 +4,7 @@ function [DH, M] = DaVinci_Man()
 DH = DaVinciDH();
 
 % Inertia Tensor Solo Variables
-r = 0.1;
+r = 0.05;
 h = 0.2;
 w = 0.1;
 d = 0.2;
