@@ -1,0 +1,5 @@
+-> Como verificar que o descentralizado está correto?
+-> Quantas combinações de wn e zeta necessárias?
+-> Que tipo de gráficos temos que ter? q/dq? Intepretação fisica dos graficos? ms/s por segundos?
+-> Direct kinematics a sair?
+-> Dependência dos B's por q1/q2/q5 é possível confirmar?
