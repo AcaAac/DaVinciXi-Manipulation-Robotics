@@ -18,7 +18,5 @@ Robot = [-e * cos(sigma),  q1 , e * sin(sigma) , pi/2 , pi;
           0             , -q2 , e              , 0    , -gamma + sigma - pi/2;
           0             ,  q2 , b * sin(gamma) , pi/2 , -sigma;
           q5            ,  0  , 0              , 0    , b * cos(gamma)];
-% Robot = subs(Robot, q3, -q2);
-% Robot = subs(Robot, q4, q2);
 end
 
