@@ -1,0 +1,19 @@
+Construção blocos ^B/^n ?
+Matrizes de ganho a 2x2 ? implica que q's => 2x2 ?
+Ra/Pa ?
+CLIK tem que dar ddq, dq, q?
+Desenho?
+Increasing velocity?
+Pa/ Ra
+
+---------------------------------------------
+
+Outro valor de q2 para maxima inercia
+Jacobiano-1 para q_dot para entrar nos controladores
+
+Verificar trajetória de sutura
+q3 nominal mudar
+tf altera as velocidades para comprar com controladores
+justificação de porquê utilizar jacobiano
+justificação de configuração de inércia com q2 em configuração util
+Pa e Ra úteis com apontamentos de email
