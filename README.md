@@ -46,6 +46,10 @@ cd Manipulation-Robotics--IST/Lab1/94186_96138_Group5_Code_Report_for_Submission
 
 # Open the Simulink model or MATLAB scripts in MATLAB
 ```
+
+### Report
+Report is inside the previous folder under RMan_Kinematics.pdf
+
 ## Lab 2: Dynamics of DaVinciXi
 
 ### Description
@@ -73,3 +77,5 @@ cd Manipulation-Robotics--IST/Lab2/Group_5_96138_94186
 
 # Open the Simulink model or MATLAB scripts in MATLAB
 ```
+### Report
+Report is inside the previous folder under RMan_Dynamics.pdf
