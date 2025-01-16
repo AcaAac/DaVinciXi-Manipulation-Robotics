@@ -54,7 +54,7 @@ Solutions to the above questions can be found inside the `Group_5_96138_94186` f
 ### Trajectory Task
 The chosen trajectory task for the DaVinciXi manipulator is an abdominal suture task.
 
-![Abdominal Suture Task 1](Images/Abdominal_Suture.png)
+![Abdominal Suture Task 1](LAB2_DYNAMICS/Images/Abdominal_Suture.png)
 
 
 
