@@ -6,13 +6,9 @@ This repository contains two lab assignments for the Manipulation Robotics cours
 
 - [Lab 1: Kinematics of DaVinciXi](#lab-1-kinematics-of-davincixi)
   - [Description](#description)
-  - [Installation](#installation)
-  - [Usage](#usage)
   - [Report](#report1)
 - [Lab 2: Dynamics of DaVinciXi](#lab-2-dynamics-of-davincixi)
   - [Description](#description)
-  - [Installation](#installation)
-  - [Usage](#usage)
   - [Report](#report2)
 
 ## Lab 1: Kinematics of DaVinciXi
@@ -21,61 +17,44 @@ This repository contains two lab assignments for the Manipulation Robotics cours
 
 This lab focuses on the kinematics of the DaVinciXi robotic system. It involves the implementation of kinematic models using Simulink and MATLAB. The lab folder contains the problem sheet, the submitted code, and the detailed report.
 
-### Installation
+The questions to answer were (as reported in the Project - RMan.pdf inside the LAB1 folder):
 
-To set up the environment for Lab 1, follow these steps:
-
-```bash
-# Clone the repository
-git clone https://github.com/AcaAac/Manipulation-Robotics--IST.git
-
-# Navigate to the Lab 1 directory
-cd Manipulation-Robotics--IST/Lab1
-
-# Unzip the submitted code
-unzip 94186_96138_Group5_Code_Report_for_Submission.zip
-
-# Ensure you have MATLAB and Simulink installed
-
-```
-
-### Usage
-```bash
-# Navigate to the directory containing the code
-cd Manipulation-Robotics--IST/Lab1/94186_96138_Group5_Code_Report_for_Submission
-
-# Open the Simulink model or MATLAB scripts in MATLAB
-```
+1. Draw the Denavit Hartenberg Convention of the DaVinciXi
+2. Create a Simulink model for the forward kinematics of the DaVinciXi
+3. Solve the closed form solution of the inverse kinematics
+4. Create a Simulink model of the Jacobian of the robot
+5. Using the Jacobian and direct kinematics, solve the CLIK - closed loop inverse kinematics
 
 ### Report
-Report is inside the previous folder under RMan_Kinematics.pdf
+Report is inside the previous folder under RMan_Kinematics.pdf.
+
+Solutions to the above questions can be found inside the `94186_96138_Group5_Code_Report_for_Submission` folder, which contains the code and the report that solved the questions.
 
 ## Lab 2: Dynamics of DaVinciXi
 
 ### Description
 
 This lab focuses on the dynamics of the DaVinciXi robotic system. It involves the implementation of dynamic models using Simulink and MATLAB. The lab folder contains the problem sheet, the submitted code, and the comprehensive report.
-### Installation
 
-To set up the environment for Lab 2, follow these steps: 
-```bash
-# Clone the repository
-git clone https://github.com/AcaAac/Manipulation-Robotics--IST.git
+The questions to answer were:
 
-# Navigate to the Lab 2 directory
-cd Manipulation-Robotics--IST/Lab2
+1. Parametrize the DaVinci Xi's dynamics with inertia tensors, centers of mass, and mass.
+2. Run either a Newton-Euler or Lagrange-Euler method to compute the dynamics of the DaVinciXi.
+3. Calculate the worst-case inertia for each link of the DaVinci. Run a decentralized PID controller.
+4. Design and implement a centralized inverse dynamics controller.
+5. Choose any trajectory task to run the manipulator with.
 
-# Unzip the submitted code
-unzip Group_5_96138_94186.zip
+For the task, we chose an abdominal suture trajectory.
 
-# Ensure you have MATLAB and Simulink installed
-```
-### Usage
-```bash
-# Navigate to the directory containing the code
-cd Manipulation-Robotics--IST/Lab2/Group_5_96138_94186
-
-# Open the Simulink model or MATLAB scripts in MATLAB
-```
 ### Report
-Report is inside the previous folder under RMan_Dynamics.pdf
+Report is inside the previous folder under RMan_Dynamics.pdf.
+
+Solutions to the above questions can be found inside the `Group_5_96138_94186` folder, which contains the code and the report that solved the questions.
+
+### Trajectory Task
+The chosen trajectory task for the DaVinciXi manipulator is an abdominal suture task.
+
+![Abdominal Suture Task 1](Images/Abdominal_Suture.png)
+
+
+
