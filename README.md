@@ -1,6 +1,7 @@
 # Manipulation Robotics Labs
 
 This repository contains two lab assignments for the Manipulation Robotics course. Each lab folder includes the problem sheet, the submitted code, and the report.
+![DaVinci](DaVinci.jpg)
 
 ## Table of Contents
 
